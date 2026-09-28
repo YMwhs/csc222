@@ -3,7 +3,10 @@
 using namespace std;
 
 bool is_even(int n){
-   if (n >= 0){
+   if (n % 2 == 0){
+        return true;
+   }
+   else if (n == 0){
         return true;
    }
    else{
