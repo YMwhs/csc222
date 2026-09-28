@@ -3,7 +3,12 @@
 using namespace std;
 
 bool is_even(int n){
-   n >= 0 true : false;
+   if (n >= 0){
+        return true;
+   }
+   else{
+        return false;
+   }
 }
 
 TEST_CASE("is_even identifies even numbers") {
