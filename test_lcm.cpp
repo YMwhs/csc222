@@ -1,17 +1,19 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest.h>
 using namespace std;
-int findgcd(a, b){
-    while (b! = 0){
-        a % b;
+int findgcd(int a, int b){
+    while (b != 0){
+        int temp = b;
+        b = a % b;
+        a = temp;
     }
     return a;
 }
 int lcm (int n, int m){
-    if (a == 0 || b == 0){
+    if (n == 0 || m == 0){
         return 0;
     }
-    return (a * b) / findgcd(a, b);
+    return (n * m) / findgcd(n, m);
 }
 TEST_CASE("lcm(int n, int m) returns the LCM of n and m") {
     CHECK(lcm(12, 20) == 60);
