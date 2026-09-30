@@ -2,8 +2,13 @@
 #include <doctest.h>
 using namespace std;
 
-int is_divisible_by(int n, int d){
-
+bool is_divisible_by(int n, int d){
+    if (n % d != 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 TEST_CASE("is_divisible_by(int n, int d) returns whether d divides n"){
