@@ -4,10 +4,10 @@ using namespace std;
 
 bool is_divisible_by(int n, int d){
     if (n % d != 0){
-        return true;
+        return false;
     }
     else{
-        return false;
+        return true;
     }
 }
 
