@@ -4,11 +4,13 @@ using namespace std;
 
 bool is_prime(int n){
     int temp = n;
-    bool temp2 = false;
+    bool temp2 = true;
     while (temp > 0){
         temp--;
         if (temp % n == 0){
-            temp2 = true;
+            if (temp != 1){
+                temp2 = false;
+            }
         }
     }
     return temp2;
