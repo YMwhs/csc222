@@ -7,7 +7,7 @@ bool is_prime(int n){
     bool temp2 = true;
     while (temp > 0){
         temp--;
-        if (temp % n == 0){
+        if (n % temp == 0){
             if (temp != 1){
                 temp2 = false;
             }
