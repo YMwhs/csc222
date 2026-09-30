@@ -6,10 +6,10 @@ int sum_of_squares_to_n(int n){
     int temp = n;
     int answer = 0;
     while (temp > 0){
-        temp--;
         int anotherTemp = 0;
         anotherTemp = temp * temp;
         answer += anotherTemp;
+        temp--;
     }
     return answer;
 }
