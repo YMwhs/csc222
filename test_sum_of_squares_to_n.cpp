@@ -3,11 +3,13 @@
 using namespace std;
 
 int sum_of_squares_to_n(int n){
-    int temp = 0;
+    int temp = n;
     int answer = 0;
-    while (temp != n){
-        temp++;
-        answer = temp * temp;
+    while (temp > 0){
+        temp--;
+        int anotherTemp = 0;
+        anotherTemp = temp * temp;
+        answer += anotherTemp;
     }
     return answer;
 }
