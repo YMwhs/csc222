@@ -3,7 +3,12 @@
 using namespace std;
 
 int gcd (int n, int m){
-
+    while (m != 0){
+        int temp = m;
+        m = n % m;
+        n = temp;
+    }
+    return n;
 }
 
 TEST_CASE("gcd(int n, int m) returns the GCD of n and m") {
