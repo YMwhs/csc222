@@ -4,7 +4,7 @@ using namespace std;
 
 int largest_digit(int n){
     if (n < 0){
-        
+        n *= -1;        
     }
     int largest = 0;
     while (n > 0){
