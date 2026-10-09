@@ -21,8 +21,13 @@ int count_vowels(string s){
     return count;
 }
 
-bool is_palindrom(string s){
-
+bool is_palindrome(string s){
+    for (int i = 0; i < s.length() / 2; i++){
+        if (s[i] != s[s.length() - 1 - i]){
+            return false;
+        }
+    }
+    return true;
 }
 // Your function goes here
 TEST_CASE("reverse_string(s) returns s backwards") {
