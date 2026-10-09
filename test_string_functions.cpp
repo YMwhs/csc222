@@ -63,7 +63,19 @@ string shout(string s){
 }
 
 string mock(string s){
-    
+    bool upper = false;
+
+    for (int i = 0; i < s.length(); i++){
+        if (isalpha(s[i])){
+            if (upper){
+                s[i] = toupper(s[i]);
+            }
+            else{
+                s[i] = tolower(s[i]);
+           }
+        }
+    }
+    return s;
 }
 
 // Your function goes here
