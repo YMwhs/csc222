@@ -52,8 +52,14 @@ string shout(string s){
     for (int i = 0; i < s.length(); i++){
         s[i] = toupper(s[i]);
     }
-
-
+    
+    if (!s.empty() && s[s.length() - 1] == '.'){
+        s[s.length() - 1] = '!';
+    }
+    else if (s.empty() || s[s.length() - 1] != '!'){
+        s += '!';
+    }
+    return s;
 }
 
 // Your function goes here
