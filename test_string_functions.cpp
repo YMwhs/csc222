@@ -48,6 +48,10 @@ int count_words(string s){
     return count;
 }
 
+string shout(string s){
+
+}
+
 // Your function goes here
 TEST_CASE("reverse_string(s) returns s backwards") {
     CHECK(reverse_string("happy").compare("yppah") == 0);
@@ -78,4 +82,10 @@ TEST_CASE("count_words counts words") {
     CHECK(count_words("Word!") == 1);
     CHECK(count_words("Thing1 and Thing2") == 3);
     CHECK(count_words("This is the song that never ends.") == 7);
+}
+// Function 5
+TEST_CASE("shout turns an exclaimation into a demand") {
+    CHECK(shout("Don't touch that.") == "DON'T TOUCH THAT!");
+    CHECK(shout("Let's go.") == "LET'S GO!");
+    CHECK(shout("Leave it there!") == "LEAVE IT THERE!");
 }
