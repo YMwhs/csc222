@@ -87,7 +87,13 @@ string mock(string s){
 }
 
 int count_char(string s, char ch){
-
+    int count = 0;
+    for (int i = 0; i < s.length(); i++){
+        if (tolower(s[i]) == tolower(ch)){
+            count++;
+        }
+    }
+    return count;
 }
 
 // Your function goes here
