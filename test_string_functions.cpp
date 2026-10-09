@@ -14,7 +14,7 @@ string reverse_string(string s){
 int count_vowels(string s){
     int count = 0;
     for (int i = 0; i < s.length(); i++){
-        if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u' || s[i] == 'A' || s[i] == 'E' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u'){
+        if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u' || s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U'){
             count++;
         }
     }
