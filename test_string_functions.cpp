@@ -62,6 +62,10 @@ string shout(string s){
     return s;
 }
 
+string mock(string s){
+    
+}
+
 // Your function goes here
 TEST_CASE("reverse_string(s) returns s backwards") {
     CHECK(reverse_string("happy").compare("yppah") == 0);
@@ -98,4 +102,13 @@ TEST_CASE("shout turns an exclaimation into a demand") {
     CHECK(shout("Don't touch that.") == "DON'T TOUCH THAT!");
     CHECK(shout("Let's go.") == "LET'S GO!");
     CHECK(shout("Leave it there!") == "LEAVE IT THERE!");
+}
+// function 6
+TEST_CASE("mock turns a string into a SpongeBob meme") {
+    CHECK(mock("We are learning C++.") == "wE aRe lEaRnInG c++.");
+    CHECK(
+        mock("I'm not sure how to do this.") ==
+        "i'M nOt SuRe hOw To Do ThIs."
+    );
+    CHECK(mock("Mississippi") == "mIsSiSsIpPi");
 }
