@@ -11,7 +11,9 @@ string reverse_string(string s){
        return reversedWord;
 }
 
+int count_vowels(string s){
 
+}
 
 // Your function goes here
 TEST_CASE("reverse_string(s) returns s backwards") {
