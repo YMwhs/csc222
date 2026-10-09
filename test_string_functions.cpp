@@ -66,8 +66,11 @@ string mock(string s){
     bool upper = false;
 
     for (int i = 0; i < s.length(); i++){
-        if (s[i] == ' ' || s[i] == '\''){
+        if (s[i] == ' '){
             upper = false;
+        }
+        else if (s[i] == '\''){
+            upper = true;
         }
         else if (isalpha(s[i])){
             if (upper){
@@ -125,7 +128,7 @@ TEST_CASE("mock turns a string into a SpongeBob meme") {
     CHECK(mock("We are learning C++.") == "wE aRe lEaRnInG c++.");
     CHECK(
         mock("I'm not sure how to do this.") ==
-        "i'M nOt SuRe hOw To Do ThIs."
+        "i'M nOt sUrE hOw tO dO tHiS."
     );
     CHECK(mock("Mississippi") == "mIsSiSsIpPi");
 }
