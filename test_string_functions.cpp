@@ -21,6 +21,9 @@ int count_vowels(string s){
     return count;
 }
 
+bool is_palindrom(string s){
+
+}
 // Your function goes here
 TEST_CASE("reverse_string(s) returns s backwards") {
     CHECK(reverse_string("happy").compare("yppah") == 0);
@@ -36,3 +39,13 @@ TEST_CASE("count_vowels counts lowercase vowels") {
     CHECK(count_vowels("aeiou") == 5);
     CHECK(count_vowels("MISSISSIPPI") == 4);
 }
+
+// Function 3
+TEST_CASE("is_palindrome detects palindromes") {
+    CHECK(is_palindrome("") == true);
+    CHECK(is_palindrome("a") == true);
+    CHECK(is_palindrome("aba") == true);
+    CHECK(is_palindrome("abba") == true);
+    CHECK(is_palindrome("abc") == false);
+}
+
