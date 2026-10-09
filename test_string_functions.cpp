@@ -31,7 +31,21 @@ bool is_palindrome(string s){
 }
 
 int count_words(string s){
+    int count = 0;
+    bool inWord = false;
 
+    for (int i = 0; i < s.length(); i++){
+        if (s[i] != ' '){
+            if (!inWord){
+                count++;
+                inWord = true;
+            }
+        }
+        else {
+            inWord = false;
+        }
+        }
+    return count;
 }
 
 // Your function goes here
