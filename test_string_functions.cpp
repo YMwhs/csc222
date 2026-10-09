@@ -86,6 +86,10 @@ string mock(string s){
     return s;
 }
 
+int count_char(string s, char ch){
+
+}
+
 // Your function goes here
 TEST_CASE("reverse_string(s) returns s backwards") {
     CHECK(reverse_string("happy").compare("yppah") == 0);
@@ -131,4 +135,11 @@ TEST_CASE("mock turns a string into a SpongeBob meme") {
         "i'M nOt sUrE hOw tO dO tHiS."
     );
     CHECK(mock("Mississippi") == "mIsSiSsIpPi");
+}
+// Function 7
+TEST_CASE("count_char(s, ch) counts number of times ch occurs in s") {
+    CHECK(count_char("abcd", 'c') == 1);
+    CHECK(count_char("abcd", 'x') == 0);
+    CHECK(count_char("Excellent!", 'e') == 3);
+    CHECK(count_char("Abracadabra", 'a') == 5);
 }
