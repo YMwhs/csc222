@@ -4,6 +4,10 @@
 #include <doctest.h>
 using namespace std;
 
+struct Point(
+    int x, y;
+);
+
 Point distance_from_origin(Point& distance){
     int temp1 = distance.x * distance.x;
     int temp2 = distance.y * distance.y;
