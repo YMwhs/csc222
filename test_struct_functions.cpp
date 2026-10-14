@@ -5,10 +5,11 @@
 using namespace std;
 
 struct Point(
-    int x, y;
+    int x;
+    int y;
 );
 
-Point distance_from_origin(Point& distance){
+double distance_from_origin(Point& distance){
     int temp1 = distance.x * distance.x;
     int temp2 = distance.y * distance.y;
     int temp3 = temp1 + temp2;
@@ -17,6 +18,6 @@ Point distance_from_origin(Point& distance){
 
 // Your function goes here
 TEST_CASE("distance_from_origin(p) returns p's distance from (0, 0) ") {
-    p = Point{3, 4};
+    Point p = Point{3, 4};
     CHECK(distance_from_origin(p) == 5.0);
 }
