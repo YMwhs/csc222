@@ -4,15 +4,15 @@
 #include <doctest.h>
 using namespace std;
 
-struct Point(
-    int x;
-    int y;
-);
+struct Point{
+    double x;
+    double y;
+};
 
 double distance_from_origin(Point& distance){
-    int temp1 = distance.x * distance.x;
-    int temp2 = distance.y * distance.y;
-    int temp3 = temp1 + temp2;
+    double temp1 = distance.x * distance.x;
+    double temp2 = distance.y * distance.y;
+    double temp3 = temp1 + temp2;
     return sqrt(temp3);
 }
 
