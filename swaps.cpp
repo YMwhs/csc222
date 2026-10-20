@@ -9,7 +9,10 @@ void wont_swap(int a, int b){
 }
 
 void will_swap(int a, int b){
-    
+    int temp = a;
+    a = b;
+    b = temp;
+    cout << "a: " << a << " b: " << b << endl;
 }
 
 int main(){
