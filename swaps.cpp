@@ -2,7 +2,10 @@
 using namespace std;
 
 void wont_swap(int a, int b){
-
+  int temp = a;
+  a = b;
+  b = temp;
+  count << "a: " << a << " b: " << b << endl;
 }
 
 void will_swap(int a, int b){
