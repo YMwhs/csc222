@@ -5,7 +5,7 @@ void wont_swap(int a, int b){
   int temp = a;
   a = b;
   b = temp;
-  count << "a: " << a << " b: " << b << endl;
+  cout << "a: " << a << " b: " << b << endl;
 }
 
 void will_swap(int a, int b){
@@ -21,9 +21,9 @@ int main(){
     cout << "x: " << x << " y: " << y << endl;
     cout << "address of x: " << long(&x) << endl;
     cout << "address of y: " << long(&y) << endl;
-    wontSwap(x, y);
+    wont_swap(x, y);
     cout << "x: " << x << " y: " << y << endl;
-    willSwap(x , y);
+    will_swap(x , y);
     cout << "x: " << x << " y: " << y << endl;
     return 0;
 }
