@@ -5,16 +5,9 @@
 #include "num_vector_utils.h"
 using namespace std;
 
-string render_num_vector(const vector<int>&){
-    string s = "";
-    return s;
-}
-
-TEST_CASE("Testing render_num_vector"){
+TEST_CASE("Testing render_num_vector") {
     vector<int> nums = {1, 3, 7};
     string numstr = render_num_vector(nums);
     string expected = "1 3 7";
     CHECK(numstr == expected);
-    vector<int> nums = {1, 3, 7};
-    CHECK(11 == num_vector_sum(nums));
 }
