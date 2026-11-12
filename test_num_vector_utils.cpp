@@ -75,6 +75,16 @@ int counts(const vector<int>& nums, int value){
 
 vector<int> insertion_sort(const vector<int>& nums){
     vector<int> result = nums;
+    for (int i = 1; i < result.size(); i++){
+        int key = result[i];
+        int j = i-1;
+        while (j >= 0 && result[j] > key){
+            result[j + 1] = result[j];
+            j--;
+        }
+        result[j +1] = key;
+    }
+    return result;
 }
 
 TEST_CASE("Testing render_num_vector but with 5 numbers"){
