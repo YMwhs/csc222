@@ -108,3 +108,15 @@ TEST_CASE("Testing nums_between function") {
     string expected = "11 13 10 19 20 14";
     CHECK(render_num_vector(nums2) == expected);
 }
+TEST_CASE("Testing count function") {
+    vector<int> nums = {11, 20, 11, 4, 10, 26, 7, 88, 19, 20, 11, 5, 32};
+    int elevens = counts(nums, 11)
+    int twenties = counts(nums, 20)
+    int sevens = counts(nums, 7)
+    int eights = counts(nums, 8)
+    CHECK(elevens == 3);
+    CHECK(twenties == 2);
+    CHECK(sevens == 1);
+    CHECK(eights == 0);
+}
+
