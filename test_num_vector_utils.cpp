@@ -63,8 +63,14 @@ vector<int> nums_between(const vector<int>& nums, int low, int high){
     return result;
 }
 
-int counts(const vector<int>&, int value){
-
+int counts(const vector<int>& nums, int value){
+    int count = 0;
+    for (int i = 0; i < nums.size(); i++){
+        if (nums[i] == value){
+            count++;
+        }
+    }
+    return count;
 }
 
 TEST_CASE("Testing render_num_vector but with 5 numbers"){
@@ -114,10 +120,10 @@ TEST_CASE("Testing nums_between function") {
 }
 TEST_CASE("Testing count function") {
     vector<int> nums = {11, 20, 11, 4, 10, 26, 7, 88, 19, 20, 11, 5, 32};
-    int elevens = counts(nums, 11)
-    int twenties = counts(nums, 20)
-    int sevens = counts(nums, 7)
-    int eights = counts(nums, 8)
+    int elevens = counts(nums, 11);
+    int twenties = counts(nums, 20);
+    int sevens = counts(nums, 7);
+    int eights = counts(nums, 8);
     CHECK(elevens == 3);
     CHECK(twenties == 2);
     CHECK(sevens == 1);
