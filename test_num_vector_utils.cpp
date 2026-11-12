@@ -129,4 +129,8 @@ TEST_CASE("Testing count function") {
     CHECK(sevens == 1);
     CHECK(eights == 0);
 }
-
+TEST_CASE("Testing insertion_sort"){
+    vector<int> nums = {5, 2, 4, 1};
+    vector<int> sorted = insertion_sort(nums);
+    CHECK(render_num_vector(sorted) == "1 2 4 5");
+}
