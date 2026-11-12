@@ -53,8 +53,14 @@ vector<int> only_odds(const vector<int>& nums){
     return odds;
 }
 
-vector<int> nums_between(const vector<int>){
+vector<int> nums_between(const vector<int>, int low, int high){
     vector<int> result;
+    for (int i = 0; i < nums.size(); i++){
+        if (nums[i] >= low && nums[i] <= high){
+            result.push_back(nums[i]);
+        }
+    }
+    return result;
 }
 
 TEST_CASE("Testing render_num_vector but with 5 numbers"){
