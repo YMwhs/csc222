@@ -43,6 +43,17 @@ vector<int> only_evens(const vector<int>& nums){
     return evens;
 }
 
+vector<int> only_odds(const vector<int>& nums){
+    vector<int> odds;
+    for (int i = 0; i < nums.size(); i++){
+        if (nums[i] % 2 != 0){
+            odds.push_back(nums[i]);
+        }
+    }
+    return odds;
+}
+
+
 TEST_CASE("Testing render_num_vector but with 5 numbers"){
     vector<int> nums = {2, 4, 6, 8, 10};
     string expected = "2 4 6 8 10";
@@ -76,3 +87,10 @@ TEST_CASE("Testing only_evens") {
     string expected = "2 4 6 8 12 14 22";
     CHECK(render_num_vector(evens) == expected);
 }
+TEST_CASE("Testing only_odds") {
+    vector<int> nums = {1, 2, 3, 4, 6, 7, 8, 11, 12, 14, 27, 22};
+    vector<int> odds = only_odds(nums);
+    string expected = "1 3 7 11 27";
+    CHECK(render_num_vector(odds) == expected);
+}
+
