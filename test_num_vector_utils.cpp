@@ -23,6 +23,12 @@ TEST_CASE("Testing render_num_vector but with 5 numbers"){
     CHECK(render_num_vector(nums) == expected);
 }
 
+TEST_CASE("Testing render_num_vector but with empty vector"){
+    vector<int> nums = {};
+    string expected = "";
+    CHECK(render_num_vector(nums) == expected);
+}
+
 TEST_CASE("Testing render_num_vector"){
     vector<int> nums = {1, 3, 7};
     string numstr = render_num_vector(nums);
