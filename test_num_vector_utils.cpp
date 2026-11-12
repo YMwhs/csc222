@@ -17,6 +17,12 @@ string render_num_vector(const vector<int>& nums){
     return s;
 }
 
+TEST_CASE("Testing render_num_vector but with 5 numbers"){
+    vector<int> nums = {2, 4, 6, 8, 10};
+    string expected = "2 4 6 8 10";
+    CHECK(render_num_vector(nums) == expected);
+}
+
 TEST_CASE("Testing render_num_vector"){
     vector<int> nums = {1, 3, 7};
     string numstr = render_num_vector(nums);
