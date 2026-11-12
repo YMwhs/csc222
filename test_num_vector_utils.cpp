@@ -17,6 +17,10 @@ string render_num_vector(const vector<int>& nums){
     return s;
 }
 
+int num_vector_sum(const vector<int>& nums){
+    
+}
+
 TEST_CASE("Testing render_num_vector but with 5 numbers"){
     vector<int> nums = {2, 4, 6, 8, 10};
     string expected = "2 4 6 8 10";
