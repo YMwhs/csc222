@@ -34,7 +34,13 @@ int num_vector_product(const vector<int>& nums){
 }
 
 vector<int> only_evens(const vector<int>& nums){
-    
+    vector<int> evens;
+    for (int i = 0; i < nums.size(); i++){
+        if (nums[i] % 2 == 0){
+            evens.push_back(nums[i]);
+        }
+    }
+    return evens;
 }
 
 TEST_CASE("Testing render_num_vector but with 5 numbers"){
